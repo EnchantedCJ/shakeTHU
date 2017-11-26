@@ -1,0 +1,239 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\draw.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\draw.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 123, 81
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 draw"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,22,18,18
+    LTEXT           "draw，1.0 版",IDC_STATIC,42,14,53,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2013",IDC_STATIC,42,26,66,8
+    DEFPUSHBUTTON   "确定",IDOK,23,51,72,14,WS_GROUP
+    LTEXT           "POWER BY LKQ",IDC_STATIC,43,39,71,8
+END
+
+IDD_DRAW_DIALOG DIALOGEX 0, 0, 453, 353
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "选择地震波"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "退出",IDOK,400,11,39,42
+    LTEXT           "",IDC_STATIC,19,108,409,105
+    PUSHBUTTON      "绘制地震动",IDC_BUTTON1,79,73,41,21
+    GROUPBOX        "绘制地震波",IDC_STATIC,13,96,424,121
+    PUSHBUTTON      "选择曲线颜色",IDC_BUTTON2,15,73,52,21
+    PUSHBUTTON      "查看曲线↓",IDC_BUTTON3,349,54,51,13
+    LTEXT           "",IDC_SPE,19,228,409,108
+    PUSHBUTTON      "绘制反应谱",IDC_BUTTON4,132,73,46,21
+    GROUPBOX        "绘制反应谱(m/s^-2)",IDC_STATIC,13,218,424,122
+    PUSHBUTTON      "Y向地震动",IDC_BUTTON6,312,73,41,21
+    PUSHBUTTON      "生成规范反应谱",IDC_BUTTON7,349,40,51,13
+    COMBOBOX        IDC_COMBO1,76,21,178,12,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "选择地震动特性",IDC_STATIC,14,7,255,62
+    LTEXT           "请选择地震动：",IDC_STATIC1,20,24,49,11
+    EDITTEXT        IDC_EDIT1,71,52,22,12,ES_AUTOHSCROLL
+    CONTROL         "地震动角度:",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,53,52,10
+    PUSHBUTTON      "ADD",ADDEQ,236,36,17,14
+    LTEXT           "添加地震动名称：",IDC_STATIC,19,38,55,11
+    EDITTEXT        IDC_EDIT2,148,52,30,12,ES_AUTOHSCROLL
+    CONTROL         "峰值加速度:",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,100,52,51,10
+    EDITTEXT        IDC_EDIT3,76,37,154,12,ES_AUTOHSCROLL
+    LTEXT           "gal",IDC_STATIC3,179,53,18,8
+    GROUPBOX        "规范反应谱参数",IDC_STATIC,273,8,73,62
+    PUSHBUTTON      "分解地震动",IDC_BUTTON9,348,10,51,14
+    PUSHBUTTON      "X向地震动",IDC_BUTTON10,261,73,41,21
+    PUSHBUTTON      "清空图表和数据",IDC_BUTTON11,362,73,74,21
+    PUSHBUTTON      "绘制规范反应谱",IDC_BUTTON5,192,73,56,21
+    PUSHBUTTON      "计算反应谱",IDC_BUTTON12,348,26,51,12
+    LTEXT           "场地类别：",IDC_STATIC10,278,20,35,9
+    LTEXT           "地震分组：",IDC_STATIC11,278,34,35,9
+    LTEXT           "地震影响：",IDC_STATIC12,278,48,35,9
+    CONTROL         "多遇",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,280,59,30,10
+    CONTROL         "罕遇",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,311,59,30,10
+    COMBOBOX        IDC_COMBO3,313,18,27,12,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO4,313,32,27,12,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO5,313,46,27,12,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "关于",IDC_INFO,400,54,38,13
+    LTEXT           "分析时间：",IDC_STATIC13,196,53,35,9
+    EDITTEXT        IDC_EDIT4,227,52,30,12,ES_AUTOHSCROLL
+    LTEXT           "s",IDC_STATIC14,260,53,8,9
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "draw.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "draw.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 116
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_DRAW_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 446
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 346
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 draw(&A)..."
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\draw.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

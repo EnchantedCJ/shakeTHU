@@ -1,0 +1,43 @@
+program pre_ear
+    implicit none
+    real*8 :: time,accel
+    real*8 :: kesai,n1,n2,gama
+    real*8 :: amax,tg
+    integer*8 :: i,num
+    write(*,*) "Please wait......"
+    kesai=0.05
+    n1=0.02+(0.05-kesai)/(4.d0+32.d0*kesai)
+    n2=1.d0+(0.05-kesai)/(0.08+1.6*kesai)
+    gama=0.9+(0.05-kesai)/(0.3+6.d0*kesai)
+    time=0
+    accel=0
+    open(100,file="SJFYP.txt")
+    read(100,*) tg
+    read(100,*) amax
+    close(100)
+    time=0
+    accel=0.45*amax*9.8
+    
+    open(200,file="SJFYPOUT.txt",position="append",status="replace",share="DENYNONE")  
+        do while(time<=6.0)
+        write(200,"(f15.7,f15.7)") time,accel     
+        if(time<0.1) then
+            time=0.1
+            accel=n2*amax*9.8
+        else if(time >= 0.1 .AND. time < tg) then
+            time=tg
+            accel=n2*amax*9.8
+        else if(time >= tg .AND. time < tg+0.1) then
+            time=time+0.001
+            accel=(tg/time)**gama*n2*amax
+        else if(time >= tg+0.1 .AND. time < 5.d0*tg ) then
+            time=time+0.01
+            accel=(tg/time)**gama*n2*amax
+        else
+            time=time+0.01
+            accel=(n2*0.2**gama-n1*(time-5.d0*tg))*amax
+        end if
+        end do
+    close(200)
+    
+end program pre_ear
